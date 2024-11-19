@@ -21,5 +21,41 @@ public class Gusano extends Entidad {
                              
       }
 
+      public void cambiarDireccion (int nuevaDireccion) {
+            if(nuevaDireccion != (direccion + 2) % 2 ) {
 
+            }
+      }
+
+      public boolean comer(Fruta fruta) {
+            if(getBounds().intersects(fruta.getBounds())) {
+                  cuerpo.add(new Point(-1,-4));
+                  return true;
+            } 
+
+            return false;
+      }
+
+      public boolean colisiona() {
+            Point cabeza = cuerpo.get(0);
+
+            for(int i = 0; i < cuerpo.size(); i++) {
+                  if(cabeza.equals(cuerpo.get(i))) return true;
+            }
+
+            return cabeza.x < 0 || cabeza.y < 0 || 
+            cabeza.x >= Configuracion.ANCHO ||
+             cabeza.y >= Configuracion.ALTO;
+      }
+
+
+      @Override
+      public void dibujar(Graphics g) {
+            g.setColor(Color.GREEN);
+
+            for (Point Segmento : cuerpo) {
+                  g.fillRect(Segmento.x, Segmento.y, ancho, alto);
+            }
+      } 
 }
+
