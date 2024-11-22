@@ -1,4 +1,7 @@
+//import java.awt.Rectangle;
 import java.awt.*;
+
+
 
 
 public abstract class Entidad {
@@ -15,8 +18,8 @@ public abstract class Entidad {
 
       public abstract void dibujar (Graphics g);
 
-      public Rentangle getBounds() {
-            return new Rentangle(x,y,ancho,alto);
+      public Rectangle getBounds() {
+            return new Rectangle(x,y,ancho,alto);
       }
       
 }
