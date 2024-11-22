@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Fruta extends Entidad {
       public Fruta() {
-            super(0,0,Configuracion.TAMAÑO, Configuracion.TAMAÑO);
+            super(0,0,Configuracion.TAMANO, Configuracion.TAMANO);
             regenerar();
       }
 

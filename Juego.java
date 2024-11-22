@@ -12,6 +12,6 @@ public class Juego {
             ventana.setResizable(false);
             ventana.setVisible(true);
 
-            
+            tablero.iniciarJuego();
       }
 }

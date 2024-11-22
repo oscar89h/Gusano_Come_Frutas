@@ -27,6 +27,15 @@ public class Tablero extends JPanel implements ActionListener {
             timer.start();
       }
 
+      @Override 
+      protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            gusano.dibujar(g);
+            fruta.dibujar(g);
+            puntaje.dibujar(g);
+      }
+
+
       @Override
       public void actionPerformed(ActionEvent e) {
             gusano.mover();
